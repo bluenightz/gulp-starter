@@ -1,5 +1,10 @@
-@include font-face('Segoe UI', 'SegoeUILight', 300);
-@include font-face('Segoe UI', 'SegoeUIRegular', 400);
-@include font-face('Segoe UI', 'SegoeUISemibold', 600);
-@include font-face('Segoe UI', 'SegoeUIBold', 700);
+// @include font-face('Segoe UI', 'SegoeUILight', 300);
+// @include font-face('Segoe UI', 'SegoeUIRegular', 400);
+// @include font-face('Segoe UI', 'SegoeUISemibold', 600);
+// @include font-face('Segoe UI', 'SegoeUIBold', 700);
 
+
+@include font-face('Avenir-Book', 'Avenir-Book-01', normal);
+@include font-face('Avenir-Heavy', 'Avenir-Heavy-05', normal);
+@include font-face('Avenir-Medium', 'Avenir-Medium-09', normal);
+@include font-face('Avenir-Black', 'Avenir-Black-03', normal);
