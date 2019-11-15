@@ -23,7 +23,8 @@ block content
 								a.btn-primary--pink(href="#") bring the feast
 					.hero__intro_wrapper
 						.hero__logo_wrapper
-							img.img-fluid(src="img/panda-head.png")
+							// img.img-fluid(src="img/panda-head.png")
+							img.img-fluid(src="img/panda_head_animation.gif")
 							#video_shape_trigger(style="position: relative; top: -200px;")
 						.hero__text
 							| 12 Deals of <br> Christmas
@@ -125,14 +126,29 @@ block content
 							| platform.
 
 
-		#mobile_shape_trigger(style="position:relative; top: -400px")
+		#mobile_shape_trigger(style="position:relative; top: -750px")
 		.container-fluid.footer.position-relative
 			.row.z-1.position-relative
 				.col-lg-5.footer_cell--left
 					.footer__inner
 						p Subscribe to our newsletter and get the hottest deals first!
 						div
-							input.form_input_text(type="text", placeholder="name.lastname@mail.com")
+							//- input.form_input_text(type="text", placeholder="name.lastname@mail.com")
+							<!-- Begin Mailchimp Signup Form -->
+							<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+							style.
+								#mc_embed_signup{ clear:left; width:100%; }
+							<div id="mc_embed_signup">
+								<form action="https://morphos.us5.list-manage.com/subscribe/post?u=33dd4b11e28dcc93303562972&amp;id=c10b38a052" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<div id="mc_embed_signup_scroll">
+									// label(for="mce-EMAIL") Subscribe
+									<input type="email" value="" name="EMAIL" class="email form_input_text" id="mce-EMAIL" placeholder="name.lastname@mail.com" required>
+									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_33dd4b11e28dcc93303562972_c10b38a052" tabindex="-1" value=""></div>
+									<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+									</div>
+								</form>
+							</div>
+
 				.col.footer_cell--right
 					div.clearfix
 						ul.footer__icon
@@ -159,4 +175,5 @@ block content
 				.col-5.position-relative
 					.mobile_wrapper#mobile_wrapper
 				.col-7
-			img.footer__shape(src="img/shape4.png", draggable="false")
+			img.footer__shape(src="img/shape4-alt.png", draggable="false")
+			// img.footer__shape(src="img/shape4.png", draggable="false")
