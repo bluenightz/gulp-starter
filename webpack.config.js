@@ -21,6 +21,11 @@ function createConfig(env) {
       // vendor: ['jquery'],
       app: './app.js',
     },
+    // entry: [
+    //   './animation.gsap.js',
+    //   './modernizr.js',
+    //   './app.js'
+    // ],
     output: {
       path: path.join(__dirname, config.dest.js),
       filename: '[name].js',
