@@ -129,48 +129,52 @@ block content
 		#mobile_shape_trigger(style="position:relative; top: -750px")
 		.container-fluid.footer.position-relative
 			.row.z-1.position-relative
-				.col-lg-5.footer_cell--left
-					.footer__inner
-						p Subscribe to our newsletter and get the hottest deals first!
-						div
-							//- input.form_input_text(type="text", placeholder="name.lastname@mail.com")
-							<!-- Begin Mailchimp Signup Form -->
-							<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-							style.
-								#mc_embed_signup{ clear:left; width:100%; }
-							<div id="mc_embed_signup">
-								<form action="https://morphos.us5.list-manage.com/subscribe/post?u=33dd4b11e28dcc93303562972&amp;id=c10b38a052" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-									<div id="mc_embed_signup_scroll">
-									// label(for="mce-EMAIL") Subscribe
-									<input type="email" value="" name="EMAIL" class="email form_input_text" id="mce-EMAIL" placeholder="name.lastname@mail.com" required>
-									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_33dd4b11e28dcc93303562972_c10b38a052" tabindex="-1" value=""></div>
-									<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-									</div>
-								</form>
-							</div>
-
 				.col.footer_cell--right
-					div.clearfix
-						ul.footer__icon
-							li Find us on:
-							li
-								a(href="https://www.facebook.com/FoodpandaThailand/", target="_blank")
-									span.fa-stack.fa-1x.text-center
-										i.fas.fa-circle.fa-stack-2x
-										i.fab.fa-facebook-f
-							li
-								a(href="https://www.instagram.com/foodpandasg/?hl=en", target="_blank")
-									span.fa-stack.fa-1x.text-center
-										i.fas.fa-circle.fa-stack-2x
-										i.fab.fa-instagram
-							li
-								a(href="https://m.me/FoodpandaThailand?fbclid=IwAR3Fz8yQ9-Ylqso7OyLdRjfQ_qlWKA9-ZCL1o58LscaCrq0N16CRtpn61vw", target="_blank")
-									span.fa-stack.fa-1x.text-center
-										i.fas.fa-circle.fa-stack-2x
-										i.fas.fa-comments
-						
-					p.footer__website foodpanda.com
-					p.footer__seo SEO copy placeholder
+					.container.p-0
+						.row
+							.col
+								.clearfix
+									ul.footer__icon
+										li
+											span.footer__title Find us on:
+									ul.footer__icon--new
+										li &nbsp;
+										li
+											a(href="https://www.facebook.com/FoodpandaThailand/", target="_blank")
+												span.fa-stack.fa-1x.text-center
+													i.fas.fa-circle.fa-stack-2x
+													i.fab.fa-facebook-f
+										li
+											a(href="https://www.instagram.com/foodpandasg/?hl=en", target="_blank")
+												span.fa-stack.fa-1x.text-center
+													i.fas.fa-circle.fa-stack-2x
+													i.fab.fa-instagram
+										li
+											a(href="https://m.me/FoodpandaThailand?fbclid=IwAR3Fz8yQ9-Ylqso7OyLdRjfQ_qlWKA9-ZCL1o58LscaCrq0N16CRtpn61vw", target="_blank")
+												span.fa-stack.fa-1x.text-center
+													i.fas.fa-circle.fa-stack-2x
+													i.fas.fa-comments
+									
+								p.footer__website foodpanda.com
+								//- p.footer__seo SEO copy placeholder
+							.col-lg-4
+								.clearfix
+									ul.footer__icon
+										li
+											span.footer__title download the app
+									ul.footer__icon--new.footer__button
+										li
+											a(href="https://play.google.com/store/apps/details?id=com.global.foodpanda.android&hl=en" target="_blank")
+												img(src="img/google_play_store_badge_en.png")
+										li
+											a(href="https://apps.apple.com/th/app/foodpanda-food-delivery/id758103884" target="_blank")
+												img(src="img/app_store_badge_en.png")
+									div.footer_text_mini_wrapper
+										p.footer__text_mini Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App store is a service mark of Apple Inc.
+										p.footer__text_mini Google Play and the Google Play logo are trademarks of Google LLC.
+
+
+				
 			.row.mobile
 				.col-5.position-relative
 					.mobile_wrapper#mobile_wrapper
