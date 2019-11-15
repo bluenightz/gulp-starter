@@ -552,7 +552,7 @@ div#mc_embed_signup {
             left: 20px;
             width: 38vw;
             height: 400px;
-            top: -620px;
+            top: -550px;
             background-position: center top;
         }
     }
@@ -671,6 +671,7 @@ ul.footer__icon--new {
     }
     &.footer__button {
         margin-left: 2px;
+        clear: left;
         li {
             margin-right: 10px !important;
             @include media-breakpoint-down(md) {
