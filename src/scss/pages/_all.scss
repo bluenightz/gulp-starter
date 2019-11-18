@@ -210,7 +210,12 @@ body, html {
             margin-right: 110px;
             @include media-breakpoint-down(md) {
                 margin-right: 0;
-                margin-top: -7px;
+                //margin-top: -7px;
+                
+            }
+            @include media-breakpoint-down(xs) {
+                margin-right: 0;
+                padding: 7px 10px;
             }
         }
     }
@@ -231,8 +236,8 @@ body, html {
         z-index: 10;
         @include media-breakpoint-down(md) {
             top: 32px;
-            padding-left: $mobile-plr;
-            padding-right: $mobile-plr;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 
@@ -368,7 +373,7 @@ body, html {
         width: 415px;
         height: 400px;
         left: 50%;
-        margin-top: 240px;
+        margin-top: 180px;
         transform: translateX(60%);
         background: url("../img/photo6.png") no-repeat;
         background-size: cover;
@@ -389,19 +394,28 @@ body, html {
         box-sizing: border-box;
         padding: 45px 50px 45px 50px;
         width: 476px;
-        min-height: 492px;
+        min-height: 420px;
         z-index: 20;
         @include media-breakpoint-down(md) {
             padding: 24px;
             height: auto;
             min-height: unset;
         }
+
+        .btn-primary--pink {
+            font-size: 18px;
+            padding: 8px 30px;
+            &:hover {
+                border: 2px solid $color-pink;
+
+            }
+        }
     }
     &__fontstyle_1 {
         @extend %h1;
-        font-size: 84px;
+        font-size: 68px;
         font-family: 'Avenir-Heavy';
-        line-height: 82px;
+        line-height: 1;
         color: $color-gray-1;
         @include media-breakpoint-down(md) {
             font-size: 40px;
@@ -412,7 +426,7 @@ body, html {
     &__fontstyle_2 {
         @extend %h3;
         color: $color-gray-1;
-        font-size: 40px;
+        font-size: 36px;
         line-height: 46px;
         font-family: 'Avenir-Heavy';
     }
@@ -444,6 +458,7 @@ body, html {
         }
     }
 }
+
 
 .mobile_section {
     padding-top: 150px;
@@ -718,7 +733,7 @@ ul.footer__icon--new {
         background-color: transparent;
         border: 0;
         color: #23444F;
-        font-size: 100px;
+        font-size: 80px;
 
         @include media-breakpoint-down(md) {
             font-size: 50px;
@@ -732,6 +747,7 @@ ul.footer__icon--new {
         left: 50%;
         width: 1px;
         height: 1px;
+        -webkit-text-stroke: 6px #EEF2F5;
     }
     .glide__arrow--left {
         left: -620px;

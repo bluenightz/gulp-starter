@@ -17,7 +17,7 @@ block content
 							source(src="img/video.mp4", type="video/mp4")
 					.container-fluid.hero__nav
 						.row
-							.col-6
+							.col-6.logo__container
 								img.hero__logo_main(src="img/logo-nav.png")
 							.col-6.hero__cta
 								a.btn-primary--pink(href="#") bring the feast
@@ -73,9 +73,12 @@ block content
 
 							.glide_arrows(data-glide-el="controls")
 								button.glide__arrow.glide__arrow--left#arrow_left(data-glide-dir="<")
-									i.fa.fa-angle-left
+									//- i.fa.fa-angle-left
+									ion-icon(name='ios-arrow-back')
 								button.glide__arrow.glide__arrow--right#arrow_right(data-glide-dir=">")
-									i.fa.fa-angle-right
+									//- i.fa.fa-angle-right
+									ion-icon(name='ios-arrow-forward')
+
 							
 							.carousel_wrapper__item_number 
 								| Deal 
@@ -94,26 +97,26 @@ block content
 						.zoom_wrapper__img_wrapper.isInView(style="background-image: url(img/photo7-crop.jpg);")
 							//img.img-fluid.isInView(src="img/photo7-crop.jpg")
 		#fav_trigger
-		.container-fluid.section_style_1.position-relative
-			.container
-				.row
-					.col
-						.fav_food
-							.fav_food__box1.offset-2.col-8.offset-lg-0.col-lg-5#fav_box1
-								#fav_shape_trigger(style="position: relative; top: -700px;")
-								span.fav_food__fontstyle_1
-									| Your<br>favorite<br>
-									span.text-pink food
-									div.fav_food__fontstyle_2--mt-1 just a click away!
-								div
-									a.btn-outline--pink(href="#", target="_blank") check it now
-							.fav_food__box2.offset-1.col-8.offset-lg-0.col-lg-5
-								//img(src="//picsum.photos/id/1080/345/475")
-							.fav_food__box3.offset-5.col-6.offset-lg-0.col-lg-4#fav_box3
-								//img(src="//picsum.photos/id/1080/272/266")
-							// .fav_food__box4
-								img(src="//placehold.it/700x412")
-			img.fav_food__shape#fav_shape(src="img/shape3.png")
+			.container-fluid.section_style_1.position-relative
+				.container
+					.row
+						.col
+							.fav_food
+								.fav_food__box1.offset-2.col-8.offset-lg-0.col-lg-5#fav_box1
+									#fav_shape_trigger(style="position: relative; top: -700px;")
+									span.fav_food__fontstyle_1
+										| Your<br>favorite<br>
+										span.text-pink food
+										div.fav_food__fontstyle_2--mt-1 just a click away!
+									div
+										a.btn-primary--pink(href="#", target="_blank") check it now
+								.fav_food__box2.offset-1.col-8.offset-lg-0.col-lg-5
+									//img(src="//picsum.photos/id/1080/345/475")
+								.fav_food__box3.offset-5.col-6.offset-lg-0.col-lg-4#fav_box3
+									//img(src="//picsum.photos/id/1080/272/266")
+								// .fav_food__box4
+									img(src="//placehold.it/700x412")
+				img.fav_food__shape#fav_shape(src="img/shape3.png")
 		
 		.container-fluid.section_style_1.mobile_section
 			.container

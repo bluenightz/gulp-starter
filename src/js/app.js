@@ -17,7 +17,7 @@ $(document).ready(() => {
     var video_shape_tween = gsap.to('#video_shape', { duration: 2, ease: 'expo.out', x: 0, y: 0, rotation: 0,});
     
     var video_shape_scene = new ScrollMagic.Scene({
-      triggerElement: '#video_shape_trigger', duration: 1000
+      //triggerElement: '#video_shape_trigger', duration: 1000
     })
       .setTween(video_shape_tween)
       .addTo(controller);
@@ -35,13 +35,13 @@ $(document).ready(() => {
     var fav_shape_tween = gsap.from('#fav_shape', { duration: 2, ease: 'expo.out', x: 1200, y: -300, rotation: -80});
 
     var fav_shape_scene = new ScrollMagic.Scene({
-      triggerElement: '#fav_shape_trigger', duration: 4000, 
+      triggerElement: '.main', duration: 4000, 
     })
       .setTween(fav_shape_tween)
       .addTo(controller);
 
 
-    var fav_box1_tween = gsap.from('#fav_box1', { duration: 2, ease: 'expo.out', y: 100 });
+    var fav_box1_tween = gsap.from('#fav_box1', { duration: 2, ease: 'expo.out', y: 200 });
 
     var fav_box1_scene = new ScrollMagic.Scene({
       triggerElement: '#fav_trigger', reverse: true, duration: 2000
@@ -50,10 +50,10 @@ $(document).ready(() => {
       .addTo(controller);
 
 
-    var fav_box3_tween = gsap.from('#fav_box3', { duration: 2, ease: 'expo.out', y: 100 });
+    var fav_box3_tween = gsap.from('#fav_box3', { duration: 4, ease: 'expo.out', y: 480 });
 
     var fav_box3_scene = new ScrollMagic.Scene({
-      triggerElement: '#fav_trigger', reverse: true, duration: 2000
+      triggerElement: '#fav_trigger', reverse: true, duration: '120%'
     })
       .setTween(fav_box3_tween)
       .addTo(controller);
@@ -176,8 +176,23 @@ $(document).ready(() => {
   }).mount();
 
   glide.on('move', function(e) {
+    console.log('move', e);
+    console.log(glide.index);
     _currentItem = glide.index;
+    console.log();
+    var container = $('.carousel_wrapper__item').eq(_currentItem);
+    var x1 = container.children('.carousel_wrapper__img_wrapper');
+    var x2 = container.children('.carousel_wrapper__desc_wrapper');
+    // gsap.from(x1, { ease: 'expo.out', x: 25, duration: 1, opacity:0 });
+    // gsap.from(x2,{ ease: 'expo.out', x: 45, duration: 5, opacity:1 });
+
+
+    var tl = gsap.timeline();
+    tl.from(x1, {x: 25, duration: 1, autoAlpha: 0});
+    tl.from(x2, {x: 45, duration: 1, autoAlpha: 0}, '-=.5' );
+    
     renderItemNumber();
+
   });
 
   if (Modernizr.mq('only all and (min-width: 768px)')) {

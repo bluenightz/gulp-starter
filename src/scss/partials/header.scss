@@ -1,3 +1,20 @@
 header {
 	
 }
+.hero__nav {
+    //background: blue;
+    .row {
+        .logo__container {
+            .hero__logo_main {
+                background-color: $color-pink;
+                padding: 13px 30px;
+                border: 2px solid $color-pink;
+
+                @include media-breakpoint-down(md) {
+                    margin-right: 0;
+                    padding: 7px 8px;
+                }
+            }
+        }
+    }
+}
