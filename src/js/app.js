@@ -1,9 +1,12 @@
+// document.createElement('picture');
+
 import './common.js';
 import $ from 'jquery';
 import Glide from '@glidejs/glide';
+// import 'picturefill';
+
 
 $(document).ready(() => {
-
   var elements;
   var windowHeight;
   var max;
@@ -175,23 +178,29 @@ $(document).ready(() => {
     animationTimingFunc: 'cubic-bezier(.1, .93, .51, .99)'
   }).mount();
 
+
   glide.on('move', function(e) {
     console.log('move', e);
     console.log(glide.index);
-    _currentItem = glide.index;
-    console.log();
-    var container = $('.carousel_wrapper__item').eq(_currentItem);
-    var x1 = container.children('.carousel_wrapper__img_wrapper');
-    var x2 = container.children('.carousel_wrapper__desc_wrapper');
-    // gsap.from(x1, { ease: 'expo.out', x: 25, duration: 1, opacity:0 });
-    // gsap.from(x2,{ ease: 'expo.out', x: 45, duration: 5, opacity:1 });
-
-
-    var tl = gsap.timeline();
-    tl.from(x1, {x: 25, duration: 1, autoAlpha: 0});
-    tl.from(x2, {x: 45, duration: 1, autoAlpha: 0}, '-=.5' );
     
-    renderItemNumber();
+    if ( _currentItem !== glide.index ) { 
+    
+      _currentItem = glide.index;
+      var container = $('.carousel_wrapper__item').eq(_currentItem);
+      var x1 = container.children('.carousel_wrapper__img_wrapper');
+      var x2 = container.children('.carousel_wrapper__desc_wrapper');
+      // gsap.from(x1, { ease: 'expo.out', x: 25, duration: 1, opacity:0 });
+      // gsap.from(x2,{ ease: 'expo.out', x: 45, duration: 5, opacity:1 });
+
+
+
+      var tl = gsap.timeline();
+      tl.from(x1, {x: 55, duration: 0.8});
+      tl.from(x2, {x: 100, duration: 1.2}, '-=.5' );
+      
+      renderItemNumber();
+
+    }
 
   });
 

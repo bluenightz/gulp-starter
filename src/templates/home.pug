@@ -14,20 +14,24 @@ block content
 				.col.p-0
 					.hero__video
 						video#hero_video(loop, muted, autoplay)
-							source(src="img/video.mp4", type="video/mp4")
+							//- source(src="img/video.mp4", type="video/mp4")
+							source(src="img/apac_bringthefeast.mp4", type="video/mp4")
 					.container-fluid.hero__nav
 						.row
 							.col-6.logo__container
+								//- picture
+									//- source(srcset="img/logo-nav.webp" type="image/webp")
+									//- source(srcset="img/logo-nav.png" type="image/png")
 								img.hero__logo_main(src="img/logo-nav.png")
 							.col-6.hero__cta
-								a.btn-primary--pink(href="#") bring the feast
+								a.btn-primary--pink(href="#") order now
 					.hero__intro_wrapper
 						.hero__logo_wrapper
 							// img.img-fluid(src="img/panda-head.png")
-							img.img-fluid(src="img/panda_head_animation.gif")
+							//- img.img-fluid(src="img/panda_head_animation.gif")
 							#video_shape_trigger(style="position: relative; top: -200px;")
 						.hero__text
-							| 12 Deals of <br> Christmas
+							| 12 deals of <br> Christmas
 						img.hero__video_shape#video_shape(src="img/video-shape.png")
 		
 		
@@ -38,11 +42,12 @@ block content
 					.col-lg-6
 						.text_wrapper.deal-12.isInView
 							| Bring the feast this season with foodpanda's
-							a(href="#", target="_blank").text-pink 12 Deals 
+							a(href="#", target="_blank").text-pink 12 deals 
 							| of Christmas.
 					.col-lg-5
 						.text_wrapper.deal-12-desc.isInView
 							| Every day from Dec 13-25, we’ve got an awesome new deal to help make this the most delicious, simple and affordable season ever! It doesn’t matter how you celebrate – with family, friends, colleagues, at home, on the couch, in bed tktktktk – we’ve got the deals that’ll help you bring the feast. Tuck in!
+
 
 		#carousel_trigger
 		.container-fluid.section_style_1--carousel.position-relative.p-0
@@ -69,15 +74,18 @@ block content
 														div
 															input(type="text", placeholder="XXXXXXX")
 													.carousel_wrapper__btn_wrapper
-														a.btn-primary--pink(href="#", target="_blank") bring the feast
+														a.btn-primary--pink(href="#", target="_blank") order now
 
 							.glide_arrows(data-glide-el="controls")
 								button.glide__arrow.glide__arrow--left#arrow_left(data-glide-dir="<")
 									//- i.fa.fa-angle-left
-									ion-icon(name='ios-arrow-back')
+									svg.s-ion-icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512')
+										path(d='M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z')
 								button.glide__arrow.glide__arrow--right#arrow_right(data-glide-dir=">")
 									//- i.fa.fa-angle-right
-									ion-icon(name='ios-arrow-forward')
+									svg.s-ion-icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512')
+										path(d='M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z')
+
 
 							
 							.carousel_wrapper__item_number 

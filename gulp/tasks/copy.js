@@ -34,13 +34,33 @@ gulp.task('copy:img', function () {
         .pipe(gulp.dest(config.dest.img));
 });
 
+gulp.task('copy:video', function () {
+    return gulp
+        .src([
+            config.src.img + '/**/*.mp4'
+        ])
+        .pipe(gulp.dest(config.dest.img));
+});
+
+gulp.task('copy:js', function () {
+    return gulp
+        .src([
+            config.src.js + '/animation.gsap.js',
+            config.src.js + '/modernizr.js',
+        ])
+        .pipe(gulp.dest(config.dest.js));
+});
+
 gulp.task('copy', [
     'copy:img',
+    'copy:video',
+    'copy:js',
     // 'copy:rootfiles',
     // 'copy:lib',
     // 'copy:data',
     'copy:fonts'
 ]);
+
 gulp.task('copy:watch', function () {
     gulp.watch(config.src.img + '/*', ['copy']);
 });

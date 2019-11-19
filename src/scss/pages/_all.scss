@@ -103,8 +103,8 @@ body, html {
         padding: 7px 15px;
     }
     &:hover {
-        border-color: white;
-        color: black;
+        border-color: $color-pink;
+        color: $color-pink;
         background-color: white;
     }
 }
@@ -230,12 +230,12 @@ body, html {
 
     &__nav {
         position: absolute;
-        top: 72px;
+        top: 0px; // 72
         left: 50%;
         transform: translateX(-50%);
         z-index: 10;
         @include media-breakpoint-down(md) {
-            top: 32px;
+            top: 32px; // 32
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -269,12 +269,13 @@ body, html {
     }
 
     &__text {
-        font: normal 120px/145px 'Avenir-Black';
+        font: normal 120px/120px 'Avenir-Black';
         color: white;
         position: relative;
+        margin-bottom: 50px;
         @include media-breakpoint-down(md) {
             font-size: 80px;
-            line-height: 120px;
+            line-height: 90px;
         }
     }
 
@@ -748,14 +749,25 @@ ul.footer__icon--new {
         width: 1px;
         height: 1px;
         -webkit-text-stroke: 6px #EEF2F5;
+        svg {
+            width: 80px;
+            height: 80px;
+            fill: $color-gray-1;
+            @media only screen and (max-width: 1177px) {
+            // @include media-breakpoint-down(md) {
+                width: 40px;
+                height: 40px;
+            }
+        }
     }
     .glide__arrow--left {
         left: -620px;
         position: absolute;
         top: 0;
 
-        @include media-breakpoint-down(md) {
-            left: -50vw;
+        @media only screen and (max-width: 1177px) {
+        // @include media-breakpoint-down(md) {
+            left: -51vw;
         }
     }
     .glide__arrow--right {
@@ -764,7 +776,7 @@ ul.footer__icon--new {
         top: 0;
 
         @include media-breakpoint-down(md) {
-            right: -50vw;
+            right: -51vw;
         }
     }
     
