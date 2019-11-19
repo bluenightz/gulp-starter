@@ -337,6 +337,7 @@ body, html {
     }
 }
 
+
 .fav_food{
     position: relative;
     @include media-breakpoint-down(md) {
@@ -952,5 +953,50 @@ ul.footer__icon--new {
             transform: translateY(0);
             opacity: 1;
         }
+    }
+}
+
+
+.no-webp {
+    .zoom_wrapper {
+        &__img_wrapper {
+            &--left {
+                background-image: url(../img/photo5-crop.png);
+            }
+            &--right {
+                background-image: url(../img/photo7-crop.jpg);
+            }
+        }
+    }
+    .fav_food__box2 {
+        background-image: url(../img/photo8.png);
+    }
+    .fav_food__box3 {
+        background-image: url(../img/photo6.png);
+    }
+    .footer .mobile_wrapper {
+        background-image: url(../img/iphone.png);
+    }
+}
+
+.webp {
+    .zoom_wrapper {
+        &__img_wrapper {
+            &--left {
+                background-image: url(../img/photo5-crop.webp);
+            }
+            &--right {
+                background-image: url(../img/photo7-crop.webp);
+            }
+        }
+    }
+    .fav_food__box2 {
+        background-image: url(../img/photo8.webp);
+    }
+    .fav_food__box3 {
+        background-image: url(../img/photo6.webp);
+    }
+    .footer .mobile_wrapper {
+        background-image: url(../img/iphone.webp);
     }
 }

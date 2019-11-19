@@ -1,9 +1,9 @@
-// document.createElement('picture');
+document.createElement('picture');
 
 import './common.js';
 import $ from 'jquery';
 import Glide from '@glidejs/glide';
-// import 'picturefill';
+import 'picturefill';
 
 
 $(document).ready(() => {

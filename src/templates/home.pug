@@ -19,10 +19,10 @@ block content
 					.container-fluid.hero__nav
 						.row
 							.col-6.logo__container
-								//- picture
-									//- source(srcset="img/logo-nav.webp" type="image/webp")
-									//- source(srcset="img/logo-nav.png" type="image/png")
-								img.hero__logo_main(src="img/logo-nav.png")
+								picture
+									source(srcset="img/logo-nav.webp" type="image/webp")
+									source(srcset="img/logo-nav.png" type="image/png")
+									img.hero__logo_main(src="img/logo-nav.png")
 							.col-6.hero__cta
 								a.btn-primary--pink(href="#") order now
 					.hero__intro_wrapper
@@ -32,7 +32,11 @@ block content
 							#video_shape_trigger(style="position: relative; top: -200px;")
 						.hero__text
 							| 12 deals of <br> Christmas
-						img.hero__video_shape#video_shape(src="img/video-shape.png")
+						
+						picture
+							source(srcset="img/video-shape.webp" type="image/webp")
+							source(srcset="img/video-shape.png" type="image/png")
+							img.hero__video_shape#video_shape(src="img/video-shape.png")
 		
 		
 		#carousel_shape_trigger
@@ -61,7 +65,10 @@ block content
 										.glide__slide
 											.carousel_wrapper__item
 												.carousel_wrapper__img_wrapper
-													img(src="img/photo3.jpg")
+													picture
+														source(srcset="img/photo3.webp" type="image/webp")
+														source(srcset="img/photo3.jpg" type="image/jpg")
+														img(src="img/photo3.jpg")
 												.carousel_wrapper__desc_wrapper
 													.carousel_wrapper__deal_number
 														img.carousel_wrapper__gift(src="img/icon_gift.png")
@@ -91,19 +98,19 @@ block content
 							.carousel_wrapper__item_number 
 								| Deal 
 								span#item_number &nbsp;
-
-			img.carousel_wrapper__shape#carousel_shape(src="img/shape2.png")
+			picture
+				source(srcset="img/shape2.webp" type="image/webp")
+				source(srcset="img/shape2.png" type="image/png")
+				img.carousel_wrapper__shape#carousel_shape(src="img/shape2.png")
 
 		.container-fluid.p-0
 			.row.m-0
 				.col-12.col-lg-6.p-0
 					.zoom_wrapper
-						.zoom_wrapper__img_wrapper.isInView(style="background-image: url(img/photo5-crop.png);")
-							//img.img-fluid.isInView(src="img/photo5-crop.png")
+						.zoom_wrapper__img_wrapper.zoom_wrapper__img_wrapper--left.isInView
 				.col-12.col-lg-6.p-0
 					.zoom_wrapper
-						.zoom_wrapper__img_wrapper.isInView(style="background-image: url(img/photo7-crop.jpg);")
-							//img.img-fluid.isInView(src="img/photo7-crop.jpg")
+						.zoom_wrapper__img_wrapper.zoom_wrapper__img_wrapper--right.isInView
 		#fav_trigger
 			.container-fluid.section_style_1.position-relative
 				.container
@@ -119,12 +126,15 @@ block content
 									div
 										a.btn-primary--pink(href="#", target="_blank") check it now
 								.fav_food__box2.offset-1.col-8.offset-lg-0.col-lg-5
-									//img(src="//picsum.photos/id/1080/345/475")
+									//- img(src="//picsum.photos/id/1080/345/475")
 								.fav_food__box3.offset-5.col-6.offset-lg-0.col-lg-4#fav_box3
-									//img(src="//picsum.photos/id/1080/272/266")
-								// .fav_food__box4
+									//- img(src="//picsum.photos/id/1080/272/266")
+								//- .fav_food__box4
 									img(src="//placehold.it/700x412")
-				img.fav_food__shape#fav_shape(src="img/shape3.png")
+				picture
+					source(srcset="img/shape3.webp" type="image/webp")
+					source(srcset="img/shape3.png" type="image/png")
+					img.fav_food__shape#fav_shape(src="img/shape3.png")
 		
 		.container-fluid.section_style_1.mobile_section
 			.container
@@ -190,5 +200,8 @@ block content
 				.col-5.position-relative
 					.mobile_wrapper#mobile_wrapper
 				.col-7
-			img.footer__shape(src="img/shape4-alt.png", draggable="false")
-			// img.footer__shape(src="img/shape4.png", draggable="false")
+			picture
+				source(srcset="img/shape4-alt.webp" type="image/webp")
+				source(srcset="img/shape4-alt.png" type="image/png")
+				img.footer__shape(src="img/shape4-alt.png", draggable="false")
+			//- img.footer__shape(src="img/shape4.png", draggable="false")
