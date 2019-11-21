@@ -8,11 +8,13 @@ header {
             .hero__logo_main {
                 background-color: $color-pink;
                 padding: 13px 30px;
+                padding-top: 25px;
                 border: 2px solid $color-pink;
 
                 @include media-breakpoint-down(md) {
                     margin-right: 0;
                     padding: 7px 8px;
+                    padding-top: 14px;
                 }
             }
         }

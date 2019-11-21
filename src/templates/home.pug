@@ -30,7 +30,7 @@ block content
 							// img.img-fluid(src="img/panda-head.png")
 							//- img.img-fluid(src="img/panda_head_animation.gif")
 							#video_shape_trigger(style="position: relative; top: -200px;")
-						.hero__text
+						h1.hero__text
 							| 12 deals of <br> Christmas
 						img.hero__video_shape#video_shape(src="img/video-shape.png")
 		
@@ -63,7 +63,7 @@ block content
 												.carousel_wrapper__img_wrapper
 													img(src="img/photo3.jpg")
 												.carousel_wrapper__desc_wrapper
-													.carousel_wrapper__deal_number
+													h2.carousel_wrapper__deal_number
 														img.carousel_wrapper__gift(src="img/icon_gift.png")
 														| Deal #{index + 1} of #{carousel_data.length}
 													.carousel_wrapper__title #{val.title}
@@ -112,10 +112,10 @@ block content
 							.fav_food
 								.fav_food__box1.offset-2.col-8.offset-lg-0.col-lg-5#fav_box1
 									#fav_shape_trigger(style="position: relative; top: -700px;")
-									span.fav_food__fontstyle_1
+									h2.fav_food__fontstyle_1
 										| Your<br>favorite<br>
 										span.text-pink food
-										div.fav_food__fontstyle_2--mt-1 just a click away!
+									div.fav_food__fontstyle_2--mt-1 just a click away!
 									div
 										a.btn-primary--pink(href="#", target="_blank") check it now
 								.fav_food__box2.offset-1.col-8.offset-lg-0.col-lg-5

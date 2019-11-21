@@ -63,7 +63,7 @@ $(document).ready(() => {
 
 
 
-    var mobile_wrapper_tween = gsap.from('#mobile_wrapper', { duration: 2, ease: 'expo.out', backgroundPosition: '50% -300%' });
+    var mobile_wrapper_tween = gsap.from('#mobile_wrapper', { duration: 2, ease: 'expo.out', backgroundPosition: '50% -600%' });
 
     var mobile_wrapper_scene = new ScrollMagic.Scene({
       triggerElement: '#mobile_shape_trigger' 
